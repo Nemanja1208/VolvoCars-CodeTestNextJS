@@ -32,6 +32,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "C:\\Nemanja\\Private\\Projekti\\PP\\Volvo Cars 2023\\Test Cars 2023\\vcctest2023\\.next/types/**/*.ts"
   ]
 }

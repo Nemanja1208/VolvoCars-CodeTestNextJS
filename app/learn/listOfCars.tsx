@@ -2,16 +2,16 @@
 
 import IndividualCar from "../../src/helpers/carInformation/individualCar";
 import { AllCars, Car } from "../../src/helpers/types";
+import { Flex } from 'vcc-ui';
 
 export const ListOfCars = ({allCars}: AllCars) => {
   return (
-    <div>
+    <Flex extend={{ flexDirection: 'row', flexWrap: 'wrap'}}>
       {allCars.map((car: Car) => (
-        <div key={car.id}>
-          <IndividualCar car={car} />
+        <div key={car.id} style={{ padding: '5px'}}>
+            <IndividualCar car={car} />
         </div>
-        
       ))}
-    </div>
+    </Flex>
   );
 }

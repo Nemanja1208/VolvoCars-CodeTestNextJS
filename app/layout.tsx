@@ -1,5 +1,7 @@
+'use client';
+// import "../public/css/styles.css";
+import { StyleProvider, ThemePicker } from 'vcc-ui';
 
-import "../public/css/styles.css";
 export default function RootLayout({
     // Layouts must accept a children prop.
     // This will be populated with nested layouts or pages
@@ -9,14 +11,13 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en">
-        <body>
-        {children}
-        </body>
+        <StyleProvider>
+          <ThemePicker variant="light">
+              <body>
+                {children}
+              </body>
+          </ThemePicker>
+        </StyleProvider>
       </html>
     );
   }
-
-  export const metadata = {
-    title: 'Home',
-    description: 'Welcome to Next.js',
-  };
