@@ -19,9 +19,9 @@ export default function individualCarID({params : { carId }} : carIdProperties) 
     <div>
         <Card>
             <Spacer />
-            <Text variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>Learn</Text>
+            <Text variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>SHOP</Text>
             <Spacer />
-            <Text variant="hillary" subStyle={'emphasis'}>CARID</Text>
+            <Text variant="columbus" subStyle={'emphasis'}>CARID</Text>
             <Spacer />
             <Text variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>{carId}</Text>
             <Spacer />

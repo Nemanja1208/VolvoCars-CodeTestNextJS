@@ -1,6 +1,6 @@
 import React from 'react';
 import { Car } from '../src/helpers/types';
-import {ListOfCars} from './learn/listOfCars';
+import {ListOfCars} from './listOfCars';
 import { Suspense } from "react";
 
 const getAllCarsAPIUrl = 'http://localhost:3000/api/cars.json';

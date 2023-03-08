@@ -1,7 +1,7 @@
 'use client';
 
-import IndividualCar from "../../src/helpers/carInformation/individualCar";
-import { AllCars, Car } from "../../src/helpers/types";
+import IndividualCar from "../src/helpers/carInformation/individualCar";
+import { AllCars, Car } from "../src/helpers/types";
 import { Flex } from 'vcc-ui';
 
 export const ListOfCars = ({allCars}: AllCars) => {
