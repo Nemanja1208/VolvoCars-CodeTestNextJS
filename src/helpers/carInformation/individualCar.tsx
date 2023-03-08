@@ -8,7 +8,7 @@ import "../../../public/css/styles.css";
 export default function individualCar({ car }) {
   return (
     <div>
-        <Card>
+        <Card className='cardStyle'>
             <Spacer />
             <Text variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>{car.bodyType.toUpperCase()}</Text>
             <Spacer />
@@ -22,6 +22,7 @@ export default function individualCar({ car }) {
             width={250}
             height={250}
             />
+            <Spacer />
         <Flex extend={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
             <Link className='linkStyle' href={`/learn/${car.id}`}>
                 <Text className='linkStyle' variant="amundsen" >{"LEARN "}<Icon color='#326bb4' type="navigation-chevronforward-12"></Icon></Text>
@@ -30,7 +31,6 @@ export default function individualCar({ car }) {
             <Link className='linkStyle' href={`/shop/${car.id}`}>
                 <Text className='linkStyle' variant="amundsen" >{"SHOP "}<Icon color='#326bb4' type="navigation-chevronforward-12"></Icon></Text>
             </Link>
-
         </Flex>
         </Card> 
     </div>
