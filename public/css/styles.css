@@ -5,22 +5,52 @@ body {
 .linkStyle {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   text-decoration: none!important;
   color: #326bb4!important;
+  padding: 10px;
 }
 
 .cardStyle {
   box-shadow: none!important;
   padding: 10px;
-  margin: 10px;
   width: 100%;
 }
 
 .imageStyle {
-  width: 100%;
+  width: 22vw;
   height: fit-content;
+}
+
+.breakWordStyle {
+  flex-direction: row!important;
+  flex-wrap: wrap!important;
+  overflow-wrap: break-word!important;
+}
+
+@media only screen and (max-width: 768px) {
+  .imageStyle {
+    width: 60vw;
+    min-width: 50vw;
+    height: 40vh;
+  }
+  .breakWordStyle {
+    width: 45%;
+  }
+  .carModelTypeStyle {
+    margin-left: -5px!important;
+  }
 }
 
 .carModelTypeStyle {
   padding: 5px;
+}
+
+.slick-initialized .slick-slide {
+  display: flex!important;
+  justify-content: center!important;
+}
+
+.slick-slide img {
+  display: -webkit-inline-box!important;
 }

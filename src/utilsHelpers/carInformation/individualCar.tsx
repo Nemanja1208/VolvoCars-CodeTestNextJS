@@ -12,13 +12,7 @@ export default function individualCar({ car }) {
             <Spacer />
             <Text variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>{car.bodyType.toUpperCase()}</Text>
             <Spacer />
-            <Flex
-            extend={{
-                flexDirection: "row",
-                flexWrap: "wrap",
-                overflowWrap: "break-word",
-            }}
-            >
+            <Flex className="breakWordStyle">
                 <Text variant="hillary" subStyle={'emphasis'}>{car.modelName}</Text>
                 <Spacer />
                 <Text className='carModelTypeStyle' variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>{car.modelType}</Text>
@@ -28,12 +22,11 @@ export default function individualCar({ car }) {
             className='imageStyle'
             src={car.imageUrl}
             alt={car.modelName}
-            objectFit="contain"
             width={200}
             height={50}
             />
             <Spacer />
-            <Flex extend={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
+            <Flex extend={{ flexDirection: "row", justifyContent: 'space-evenly', width: '100%' }}>
                 <Link className='linkStyle' href={`/learn/${car.id}`}>
                     <Text className='linkStyle' variant="amundsen" >{"LEARN "}<Icon color='#326bb4' type="navigation-chevronforward-12"></Icon></Text>
                 </Link>
