@@ -54,3 +54,12 @@ body {
 .slick-slide img {
   display: -webkit-inline-box!important;
 }
+
+.detailPageStyleImage {
+  width: 20vw!important;
+  height: 20vh!important;
+}
+
+.cardDetailStyle{
+  padding: 10px;
+}

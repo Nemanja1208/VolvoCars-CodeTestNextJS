@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Card, Text, Spacer, Flex, Icon } from 'vcc-ui';
 import Link from 'next/link';
+import { Link as VolvoLink} from 'vcc-ui'
 import "../../../public/css/styles.css";
 
 export default function individualCar({ car }) {
@@ -28,10 +29,14 @@ export default function individualCar({ car }) {
             <Spacer />
             <Flex extend={{ flexDirection: "row", justifyContent: 'space-evenly', width: '100%' }}>
                 <Link className='linkStyle' href={`/learn/${car.id}`}>
-                    <Text className='linkStyle' variant="amundsen" >{"LEARN "}<Icon color='#326bb4' type="navigation-chevronforward-12"></Icon></Text>
+                    <VolvoLink arrow="right">
+                        Learn
+                    </VolvoLink>
                 </Link>
                 <Link className='linkStyle' href={`/shop/${car.id}`}>
-                    <Text className='linkStyle' variant="amundsen" >{"SHOP "}<Icon color='#326bb4' type="navigation-chevronforward-12"></Icon></Text>
+                    <VolvoLink arrow="right">
+                        Shop
+                    </VolvoLink>
                 </Link>
             </Flex>
         </Card> 
