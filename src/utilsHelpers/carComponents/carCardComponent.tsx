@@ -5,8 +5,9 @@ import { Card, Text, Spacer, Flex, Icon } from 'vcc-ui';
 import Link from 'next/link';
 import { Link as VolvoLink} from 'vcc-ui'
 import "../../../public/css/styles.css";
+import { CarInterface } from '../types';
 
-export default function individualCar({ car }) {
+export default function cardElementForCars({ car } : CarInterface) {
   return (
     <div>
         <Card className='cardStyle'>

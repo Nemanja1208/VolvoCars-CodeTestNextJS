@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CarouselNavigation from "./carouselNavigation";
-import IndividualCar from "../carComponents/individualCar";
+import IndividualCar from "../carComponents/carCardComponent";
 import { AllCars, Car } from "../types";
 
 export default function CarouselSlider({allCars} : AllCars) {

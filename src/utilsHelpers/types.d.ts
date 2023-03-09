@@ -1,4 +1,7 @@
 import { isTypeOfExpression } from "typescript";
+interface CarInterface {
+    car: Car;
+}
 
 type Car = {
     id: string,
@@ -7,7 +10,6 @@ type Car = {
     modelType: string,
     imageUrl: string
 }
-
 interface AllCars {
     allCars: Car[];
 }
