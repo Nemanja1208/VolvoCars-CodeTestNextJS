@@ -11,5 +11,15 @@ type Car = {
     imageUrl: string
 }
 interface AllCars {
-    allCars: Car[];
+    carsToShow: Car[];
+}
+
+type parametersToReRender = {
+    id: {
+      toString: () => string;
+    };
+};
+
+type allCarIds = {
+    carId: string;
 }

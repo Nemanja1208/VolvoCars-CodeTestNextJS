@@ -1,4 +1,3 @@
-import Slider from "react-slick";
 import { Flex, IconButton } from "vcc-ui";
 
 export default function CarouselNavigation ({sliderRef}) {

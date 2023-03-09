@@ -40,6 +40,9 @@ body {
   .carModelTypeStyle {
     margin-left: -5px!important;
   }
+  .selectDropdownStyle{
+    width: 40vw!important;
+  }
 }
 
 .carModelTypeStyle {
@@ -58,6 +61,12 @@ body {
 .detailPageStyleImage {
   width: 20vw!important;
   height: 20vh!important;
+}
+
+.selectDropdownStyle{
+  min-width: 200px!important;
+  width: 20vw!important;
+  padding: 15px!important;
 }
 
 .cardDetailStyle{

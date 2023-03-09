@@ -1,9 +1,8 @@
 'use client';
 
 import Image from 'next/image'
-import { Card, Text, Spacer, Flex, Icon } from 'vcc-ui';
-import Link from 'next/link';
-import { Link as VolvoLink} from 'vcc-ui'
+import { Card, Text, Spacer, Flex } from 'vcc-ui';
+import {CallToActionComponent} from './callToAction';
 import "../../../public/css/styles.css";
 import { CarInterface } from '../types';
 
@@ -28,18 +27,7 @@ export default function cardElementForCars({ car } : CarInterface) {
             height={50}
             />
             <Spacer />
-            <Flex extend={{ flexDirection: "row", justifyContent: 'space-evenly', width: '100%' }}>
-                <Link className='linkStyle' href={`/learn/${car.id}`}>
-                    <VolvoLink arrow="right">
-                        Learn
-                    </VolvoLink>
-                </Link>
-                <Link className='linkStyle' href={`/shop/${car.id}`}>
-                    <VolvoLink arrow="right">
-                        Shop
-                    </VolvoLink>
-                </Link>
-            </Flex>
+            <CallToActionComponent car={car}/>
         </Card> 
     </div>
   );

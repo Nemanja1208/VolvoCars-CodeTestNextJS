@@ -6,7 +6,7 @@ import CarouselNavigation from "./carouselNavigation";
 import IndividualCar from "../carComponents/carCardComponent";
 import { AllCars, Car } from "../types";
 
-export default function CarouselSlider({allCars} : AllCars) {
+export default function CarouselSlider({carsToShow: allCars} : AllCars) {
 
     const sliderRef = React.useRef<Slider>(null);
 

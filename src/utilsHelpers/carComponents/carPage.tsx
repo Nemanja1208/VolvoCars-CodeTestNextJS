@@ -1,13 +1,13 @@
 'use client';
 
-import { AllCars, Car } from "../types";
+import { AllCars } from "../types";
 import { View, SelectInput, Flex, Logo } from 'vcc-ui';
 import React, { useEffect } from "react";
 
 import CarouselSlider from "../carouselComponents/carouselSlider";
-import { returnUniqueCarBodytypes } from "../helperFunctions";
+import { filterCarsAccordingToBodytype, returnUniqueCarBodytypes } from "../helperFunctions";
 
-export const CarPage = ({allCars}: AllCars) => {
+export const CarPage = ({carsToShow: allCars}: AllCars) => {
 
   const uniqueCarBodyTypes: string[] = returnUniqueCarBodytypes(allCars);
   const [choosenBodytype, setChoosenBodytype] = React.useState('');
@@ -15,26 +15,31 @@ export const CarPage = ({allCars}: AllCars) => {
 
   useEffect(() => {
     if(choosenBodytype === '') return;
-    const filteredCars = allCars.filter(cars => cars.bodyType === choosenBodytype);
-    setFilteredCarsAccordingToBodytype(filteredCars);
+    if(choosenBodytype === 'all') {
+      setFilteredCarsAccordingToBodytype(allCars);
+    } else {
+      const filteredCars = filterCarsAccordingToBodytype(allCars, choosenBodytype);
+      setFilteredCarsAccordingToBodytype(filteredCars);
+    }
   }, [allCars, choosenBodytype]);
 
   return (
     
     <View paddingLeft={5} paddingRight={5}>
       <Logo type="spreadmark" height={16} />
-      <Flex extend={{width: '10vw', padding: '15px'}}>
+      <Flex className="selectDropdownStyle">
       <SelectInput 
         label={'Filter by bodytype'}
         value={choosenBodytype}
         onChange={(e) => setChoosenBodytype(e.target.value)} 
       >
+        <option value='all'>ALL</option>
         {uniqueCarBodyTypes.map( carBodyType => (
-            <option key={carBodyType} value={carBodyType}>{carBodyType.toUpperCase()}</option>
-      ))}
+          <option key={carBodyType} value={carBodyType}>{carBodyType.toUpperCase()}</option>
+        ))}
       </SelectInput>
       </Flex>
-      <CarouselSlider allCars={filteredCarsAccordingToBodytype}/>
+      <CarouselSlider carsToShow={filteredCarsAccordingToBodytype}/>
     </View>
 
   );
