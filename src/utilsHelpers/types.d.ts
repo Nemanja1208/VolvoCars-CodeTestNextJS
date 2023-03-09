@@ -3,6 +3,12 @@ interface CarInterface {
     car: Car;
 }
 
+type carIdProperties = {
+    params: {
+        carId: string;
+    }
+}
+
 type Car = {
     id: string,
     modelName: string,

@@ -1,3 +1,4 @@
+import { fetchAllCars } from "./apiMethodsAndCalls/fetchAllCarsMethod";
 import { Car, parametersToReRender } from "./types";
 
 export const returnUniqueCarBodytypes = (allCars: Car[]) => {
@@ -18,4 +19,14 @@ export const returnAllAvailableParametersToReRender = (allCars: Car[]) => {
   return allCars.map((car: parametersToReRender) => ({
     carId: car.id.toString(),
   }))
+}
+
+export const findChoosenCarById = (allCars: Car[],carId: string) => {
+  return allCars.find(car => car.id === carId);
+}
+
+export async function getChoosenCarById(carId: string) {
+  const allCars: Car[] = await fetchAllCars();
+  const choosenCar: Car = findChoosenCarById(allCars, carId);
+  return choosenCar;
 }

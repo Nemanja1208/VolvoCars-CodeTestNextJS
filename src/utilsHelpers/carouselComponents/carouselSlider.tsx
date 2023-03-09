@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CarouselNavigation from "./carouselNavigation";
-import IndividualCar from "../carComponents/carCardComponent";
+import CarCardDesignElement from "../carComponents/carCardComponent";
 import { AllCars, Car } from "../types";
 
 export default function CarouselSlider({carsToShow: allCars} : AllCars) {
@@ -44,7 +44,7 @@ export default function CarouselSlider({carsToShow: allCars} : AllCars) {
         <Slider {...sliderSettings} ref={sliderRef}>
         {allCars.map((car: Car) => (
           <div key={car.id} style={{ padding: '5px'}}>
-              <IndividualCar car={car} />
+              <CarCardDesignElement car={car} />
           </div>
         ))}
         </Slider>
