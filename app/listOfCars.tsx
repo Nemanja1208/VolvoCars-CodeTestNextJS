@@ -2,15 +2,15 @@
 
 import IndividualCar from "../src/helpers/carInformation/individualCar";
 import { AllCars, Car } from "../src/helpers/types";
-import { Flex, View, IconButton } from 'vcc-ui';
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Flex, IconButton, View } from 'vcc-ui';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React from "react";
 
 export const ListOfCars = ({allCars}: AllCars) => {
-  let settings = {
+
+  const settings = {
     dots: false,
     infinite: false,
     autoplay: false,
@@ -30,10 +30,11 @@ export const ListOfCars = ({allCars}: AllCars) => {
       },
     ],
   };
+
   const sliderRef = React.useRef<Slider>(null);
+  
   return (
-    // <Flex extend={{ flexDirection: 'row', flexWrap: 'wrap'}}>
-      <View paddingLeft={5} paddingRight={5}>
+    <View paddingLeft={5} paddingRight={5}>
       <Slider {...settings} ref={sliderRef}>
       {allCars.map((car: Car) => (
         <div key={car.id} style={{ padding: '5px'}}>
@@ -66,12 +67,6 @@ export const ListOfCars = ({allCars}: AllCars) => {
           />
         </div>
         </Flex>
-      </View>
-      // {allCars.map((car: Car) => (
-      //   <div key={car.id} style={{ padding: '5px'}}>
-      //       <IndividualCar car={car} />
-      //   </div>
-      // ))}
-    // </Flex>
+        </View>
   );
 }

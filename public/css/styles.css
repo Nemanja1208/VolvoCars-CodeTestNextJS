@@ -3,10 +3,19 @@ body {
   color: white;
 }
 .linkStyle {
+  display: flex;
+  flex-direction: row;
   text-decoration: none!important;
   color: #326bb4!important;
 }
 
 .cardStyle {
   box-shadow: none!important;
+  padding: 5px;
+  margin: 10px;
+  width: 100%;
+}
+
+.imageStyle {
+  width: 100%;
 }
