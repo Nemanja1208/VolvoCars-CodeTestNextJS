@@ -11,11 +11,16 @@ body {
 
 .cardStyle {
   box-shadow: none!important;
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   width: 100%;
 }
 
 .imageStyle {
   width: 100%;
+  height: fit-content;
+}
+
+.carModelTypeStyle {
+  padding: 5px;
 }

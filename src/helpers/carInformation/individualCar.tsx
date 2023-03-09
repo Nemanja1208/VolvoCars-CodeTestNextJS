@@ -21,7 +21,7 @@ export default function individualCar({ car }) {
             >
                 <Text variant="hillary" subStyle={'emphasis'}>{car.modelName}</Text>
                 <Spacer />
-                <Text variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>{car.modelType}</Text>
+                <Text className='carModelTypeStyle' variant="kelly" fg={'foreground.secondary'} subStyle={'emphasis'}>{car.modelType}</Text>
             </Flex>
             <Spacer />
             <Image
@@ -29,8 +29,8 @@ export default function individualCar({ car }) {
             src={car.imageUrl}
             alt={car.modelName}
             objectFit="contain"
-            width={400}
-            height={400}
+            width={200}
+            height={50}
             />
             <Spacer />
             <Flex extend={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
