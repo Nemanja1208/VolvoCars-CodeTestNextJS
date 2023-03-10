@@ -6,8 +6,7 @@ const getAllCarsAPIUrl = 'http://localhost:3000/api/cars.json';
 
 export const fetchAllCars = cache(async () =>  {
     const responseFromGetAllCarsApi = await fetch(getAllCarsAPIUrl);
-    const allCars = await responseFromGetAllCarsApi.json();
-    return allCars;
+    return await responseFromGetAllCarsApi.json();
 });
 
 export const getChoosenCarById = cache(async (carId: string) => {
