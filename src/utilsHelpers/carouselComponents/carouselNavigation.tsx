@@ -1,6 +1,7 @@
 import { Flex, IconButton } from "vcc-ui";
+import { SliderRef } from "../types";
 
-export default function CarouselNavigation ({sliderRef}) {
+export default function CarouselNavigation ({sliderRef} : SliderRef) {
     return (
         <div id="">
         <Flex

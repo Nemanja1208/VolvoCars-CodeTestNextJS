@@ -6,6 +6,9 @@ interface AllCars {
     carsToShow: Car[];
 }
 
+interface SliderRef {
+    sliderRef: React.RefObject<Slider>
+}
 interface resetInterface {
     reset: () => void;
 }
