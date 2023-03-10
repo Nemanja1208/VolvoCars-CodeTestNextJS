@@ -38,23 +38,6 @@ body {
   overflow-wrap: break-word!important;
 }
 
-@media only screen and (max-width: 768px) {
-  .imageStyle {
-    width: 60vw;
-    min-width: 50vw;
-    height: 40vh;
-  }
-  .breakWordStyle {
-    width: 45%;
-  }
-  .carModelTypeStyle {
-    margin-left: -5px!important;
-  }
-  .selectDropdownStyle{
-    width: 40vw!important;
-  }
-}
-
 .carModelTypeStyle {
   padding: 5px;
 }
@@ -68,6 +51,12 @@ body {
   display: -webkit-inline-box!important;
 }
 
+.navigationButtons {
+  flex-direction: row!important;
+  flex-wrap: wrap!important;
+  justify-content: flex-end!important;
+  padding: 25px!important;
+}
 .detailPageStyleImage {
   width: 20vw!important;
   height: 20vh!important;
@@ -93,4 +82,26 @@ body {
   color: red;
   font-family: 'Volvo Novum';
   font-size: 1.2em;
+}
+
+/* Mobile device styling */
+
+@media only screen and (max-width: 768px) {
+  .imageStyle {
+    width: 60vw;
+    min-width: 50vw;
+    height: 40vh;
+  }
+  .breakWordStyle {
+    width: 45%;
+  }
+  .carModelTypeStyle {
+    margin-left: -5px!important;
+  }
+  .selectDropdownStyle{
+    width: 40vw!important;
+  }
+  .navigationButtons {
+    display: none!important;
+  }
 }

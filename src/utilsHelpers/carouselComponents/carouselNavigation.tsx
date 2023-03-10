@@ -2,13 +2,9 @@ import { Flex, IconButton } from "vcc-ui";
 
 export default function CarouselNavigation ({sliderRef}) {
     return (
+        <div id="">
         <Flex
-        extend={{
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "end",
-          padding: "25px",
-        }}
+        className="navigationButtons"
       >
         <div style={{ padding: "10px" }}>
           <IconButton
@@ -27,5 +23,6 @@ export default function CarouselNavigation ({sliderRef}) {
           />
         </div>
         </Flex>
+        </div>
     )
 }
