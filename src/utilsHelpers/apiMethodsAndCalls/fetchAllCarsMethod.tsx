@@ -16,4 +16,4 @@ export const getChoosenCarById = cache(async (carId: string) => {
     return choosenCar;
   });
 
-// ADD ERROR HANDLING
+// ADD ERROR HANDLING IN THE API
