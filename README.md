@@ -5,6 +5,7 @@
 - Upgraded to NEXT.JS version to [13.2.3]
 - Upgraded other dependencies to latest as well [React, ESLint, ReactDOM, Prettier]
 - Implemented project architecture according to Next.js version `13` and their `docs`
+- Implemented error handling by Next.js version `13` and their `docs`
 - Focused on Clean Code
 - Used `Typescript` and implemented reusable components
 - Checked off all requirements of the TEST plus the `bonus points`
