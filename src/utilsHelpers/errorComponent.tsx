@@ -1,7 +1,8 @@
 'use client'; // Error components must be Client components
 import { Button } from "vcc-ui"
+import { resetInterface } from "./types";
 
-export const ErrorComponent = (reset) => {
+export const ErrorComponent = ({reset} : resetInterface) => {
     return (
         <div className='errorDiv'>
             <h2 className="errorText">Something went wrong!</h2>

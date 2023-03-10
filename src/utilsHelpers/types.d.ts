@@ -2,6 +2,13 @@ import { isTypeOfExpression } from "typescript";
 interface CarInterface {
     car: Car;
 }
+interface AllCars {
+    carsToShow: Car[];
+}
+
+interface resetInterface {
+    reset: () => void;
+}
 
 type carIdProperties = {
     params: {
@@ -16,9 +23,7 @@ type Car = {
     modelType: string,
     imageUrl: string
 }
-interface AllCars {
-    carsToShow: Car[];
-}
+
 
 type parametersToReRender = {
     id: {
