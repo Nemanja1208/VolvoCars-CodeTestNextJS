@@ -2,6 +2,16 @@ body {
   background: rgb(255, 255, 255);
   color: white;
 }
+
+.detailsNavStyleSimple {
+  color: black;
+  font-family: 'Volvo Novum';
+}
+.homeLinkStyle {
+  font-size: 1.2em;
+  text-decoration: none!important;
+  color: #326bb4!important;
+}
 .linkStyle {
   display: flex;
   flex-direction: row;
