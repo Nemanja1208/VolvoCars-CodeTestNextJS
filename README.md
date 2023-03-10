@@ -4,7 +4,7 @@
 
 - Just start the project by running `npm i` and then `npm run dev` and open `localhost://3000` in browser
 ### Information about the solution
-- Upgraded to NEXT.JS version to [13.2.3]
+- Upgraded NEXT.JS to version [13.2.3]
 - Upgraded other dependencies to latest as well [React, ESLint, ReactDOM, Prettier]
 - Implemented project architecture according to Next.js version `13` and their `docs`
 - Implemented error handling by Next.js version `13` and their `docs`
