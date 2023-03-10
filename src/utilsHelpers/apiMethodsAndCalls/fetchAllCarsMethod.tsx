@@ -12,7 +12,7 @@ export const fetchAllCars = cache(async () =>  {
 
 export const getChoosenCarById = cache(async (carId: string) => {
     const allCars: Car[] = await fetchAllCars();
-    const choosenCar: Car = findChoosenCarById(allCars, carId);
+    const choosenCar: Car | undefined  = findChoosenCarById(allCars, carId);
     return choosenCar;
   });
 

@@ -5,6 +5,7 @@ import { getChoosenCarById } from '../../../src/utilsHelpers/apiMethodsAndCalls/
 import "../../../public/css/styles.css";
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 
 export const metadata = {
@@ -12,7 +13,8 @@ export const metadata = {
 };
 
 export default async function VolvoCarsShopPage({params : { carId }} : carIdProperties) {
-  const choosenCar: Car = await getChoosenCarById(carId);
+  const choosenCar: Car | undefined = await getChoosenCarById(carId);
+  if(choosenCar === undefined) return notFound();
   return (
     <div>
     <p className="detailsNavStyleSimple">Welcome to the shop page</p>
