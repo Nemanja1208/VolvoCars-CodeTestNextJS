@@ -1,5 +1,4 @@
 import React from 'react';
-import { Suspense } from "react";
 import { Car, carIdProperties } from '../../../src/utilsHelpers/types';
 import { CarInformationComponent } from '../../../src/utilsHelpers/carComponents/carInformation';
 import { getChoosenCarById } from '../../../src/utilsHelpers/helperFunctions';
@@ -14,7 +13,7 @@ export const metadata = {
 export default async function VolvoCarsShopPage({params : { carId }} : carIdProperties) {
   const choosenCar: Car = await getChoosenCarById(carId);
   return (
-    <Suspense fallback={<p>Loading shop page...</p>}>
+    <div>
     <p className="detailsNavStyleSimple">Welcome to the shop page</p>
     <Link className="homeLinkStyle" href={`/`}>Home</Link>
     <CarInformationComponent car={choosenCar} />
@@ -25,6 +24,6 @@ export default async function VolvoCarsShopPage({params : { carId }} : carIdProp
       width={200}
       height={50}
       />
-    </Suspense>
+    </div>
   );
 }
