@@ -1,5 +1,5 @@
 import React from 'react';
-import { allCarIds, Car, parametersToReRender } from '../src/utilsHelpers/types';
+import { allCarIds, Car } from '../src/utilsHelpers/types';
 import {CarPage} from '../src/utilsHelpers/carComponents/carPage';
 import { fetchAllCars } from '../src/utilsHelpers/apiMethodsAndCalls/fetchAllCarsMethod';
 import { returnAllAvailableParametersToReRender } from '../src/utilsHelpers/helperFunctions';

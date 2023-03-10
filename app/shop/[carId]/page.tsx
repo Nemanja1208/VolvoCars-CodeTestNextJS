@@ -1,10 +1,11 @@
 import React from 'react';
 import { Car, carIdProperties } from '../../../src/utilsHelpers/types';
 import { CarInformationComponent } from '../../../src/utilsHelpers/carComponents/carInformation';
-import { getChoosenCarById } from '../../../src/utilsHelpers/helperFunctions';
+import { getChoosenCarById } from '../../../src/utilsHelpers/apiMethodsAndCalls/fetchAllCarsMethod';
 import "../../../public/css/styles.css";
 import Link from 'next/link';
 import Image from 'next/image';
+
 
 export const metadata = {
   title: 'Volvo Cars Shop',

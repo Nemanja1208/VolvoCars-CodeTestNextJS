@@ -1,6 +1,6 @@
 import React from 'react';
 import { CarInformationComponent } from '../../../src/utilsHelpers/carComponents/carInformation';
-import { getChoosenCarById } from '../../../src/utilsHelpers/helperFunctions';
+import { getChoosenCarById } from '../../../src/utilsHelpers/apiMethodsAndCalls/fetchAllCarsMethod';
 import { Car, carIdProperties } from '../../../src/utilsHelpers/types';
 import "../../../public/css/styles.css";
 import Link from 'next/link';
