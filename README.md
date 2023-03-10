@@ -1,5 +1,14 @@
 # Volvo Cars (Global Online Digital)
 
+## Solution by Nemanja:
+
+- Upgraded to NEXT.JS version to [13.2.3]
+- Upgraded other dependencies to latest as well [React, ESLint, ReactDOM, Prettier]
+- Implemented project architecture according to Next.js version `13` and their `docs`
+- Focused on Clean Code
+- Used `Typescript` and implemented reusable components
+- Checked off all requirements of the TEST plus the `bonus points`
+
 ## Front-end coding test (React)
 
 Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
