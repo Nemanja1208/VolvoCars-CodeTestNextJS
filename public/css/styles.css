@@ -88,9 +88,9 @@ body {
 
 @media only screen and (max-width: 768px) {
   .imageStyle {
-    width: 60vw;
+    width: 70vw;
     min-width: 50vw;
-    height: 40vh;
+    height: 30vh;
   }
   .breakWordStyle {
     width: 45%;
