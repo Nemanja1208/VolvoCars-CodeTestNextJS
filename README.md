@@ -1,4 +1,5 @@
 # Volvo Cars (Global Online Digital)
+Next.JS App
 
 ## Solution by Nemanja:
 
